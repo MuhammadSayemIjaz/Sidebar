@@ -16,13 +16,20 @@
 body{
     background-color: var(--color4);
 }
-nav{
+.navbar{
     width: 30%;
     height: 100vh;
     background-color: var(--color5);
     box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.2),
                 0px 0px 0px rgba(0, 0, 0, 0.2);
-        
+    transition: 5s ease-in;
+    transform: translate(-100%);
+    display: none;
+}
+.showNavbar{
+    display: inline-block;
+    transform: translate(0);
+
 }
 .logo{
     font-size: 35px;
@@ -35,8 +42,11 @@ nav{
 #logo1{
     color: var(--color1);
 }
-.navBarLogo{
-    padding: 10px 40px; 
+.navBarLogo {
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 #toggleBtn{
     position: absolute;
@@ -60,13 +70,8 @@ nav{
     color: var(--color1);
 }
 .crossIcon{
-    float: right;
     width: 40px;
-    height:40px;
-    position: absolute;
-    top: 0;
-    left: 26%;
-    margin: 10px;
+    height:40px; 
     cursor: pointer;
     border-radius: 10px;
     display: flex;
@@ -83,13 +88,14 @@ nav{
 ul li a{
     font-size: 20px;
     color: var(--color3);
-}   
-/* ul li a:hover{
-} */
+    width: 100%;
+    display: inline-block;
+}  
 ul li{
     padding: 20px 40px;
     text-align: flex-start;
     width: 100%;
+    cursor: pointer;
 }
 ul li:hover, ul li a:hover{
     background-color: var(--color1);
@@ -98,7 +104,7 @@ ul li:hover, ul li a:hover{
 ul{
     margin-top: 40px;
 }
-@media (max-width:1024px){
+ @media (max-width:1024px){
 
     .logo{
         font-size: 25px;
@@ -140,13 +146,9 @@ ul{
         font-size: 29px;
     }
     .crossIcon {
-        float: right;
+       
         width: 40px;
         height: 40px;
-        position: absolute;
-        top: 0;
-        left: 23%;
-        margin: 10px;
         cursor: pointer;
         border-radius: 10px;
         display: flex;
@@ -179,13 +181,8 @@ ul{
         color: var(--color1);
     }
     .crossIcon {
-        float: right;
         width: 25px;
         height: 25px;
-        position: absolute;
-        top: 0;
-        left: 21%;
-        margin: 7px 0px 0px 10px;
         cursor: pointer;
         border-radius: 10px;
         display: flex;
@@ -206,4 +203,3 @@ ul{
         align-items: center;
     }
 }
-
